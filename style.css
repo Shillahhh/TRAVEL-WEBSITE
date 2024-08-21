@@ -1,0 +1,843 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: rgba(194, 128, 41, 0.667);
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}
+ 
+h1{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: black;
+}
+
+h2{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 22px;
+}
+
+
+
+/* **********THE HEADER SECTION*************** */
+header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(./ship-8170663_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: slideBackground 15s infinite;
+}
+
+
+.logo h1{
+    color: black;
+    padding: 10px 20px;
+    font-weight: bolder;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: none;
+}
+
+.menu ul li {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    color: black;
+}
+
+.menu ul li a{
+    display: flex;
+    justify-content: center;
+    color: black;
+    line-height: 10rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* JAVASCRIPT SECTION FOR DISPLAYING THE NAVBAR */
+.menu.active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(194, 128, 41, 0.667);
+    display: block;
+    z-index: 1;
+}
+
+.open-menu{
+    padding: 10px 20px;
+    color: black;
+}
+
+.close-menu{
+    position: absolute;
+    top: 0;
+    padding: 10px 20px;
+    font-weight: bolder;
+}
+
+/* **************HERO SECTION*************** */
+.hero-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content{
+    width: 100%;
+    margin-top: 40%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.hero-content h1{
+    color: black;
+}
+
+.hero-content p{
+    color: white;
+}
+.hero-content button{
+    padding: 10px 20px;
+    border-radius: 22px;
+}
+
+.hero-content button:hover{
+    background-color: plum;
+    transition: 1.5s ease;
+}
+
+/************* MEDIA RESPONSIVENESS FOR THE HEADER SECTION *******************/
+@media only screen and (min-width: 568px) and (max-width: 968px){
+    .hero-section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content{
+        width: 100%;
+        margin-top: 20%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    .hero-content h1{
+        color: black;
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p{
+        font-size: 1.2rem;
+        color: white;
+    }
+    .hero-content button{
+        padding: 10px;
+        font-size: 0.8rem;
+        border-radius: 22px;
+    }
+    
+    .hero-content button:hover{
+        background-color: plum;
+        transition: 1.5s ease;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){
+    .logo h1{
+        font-size: 1rem;
+    }
+
+
+    .menu{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu ul li {
+        display: inline-block;
+        padding: 10px 20px;
+        color: black;
+    }
+
+    .menu ul li a{
+        font-weight: bolder;
+        color: black;
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+
+    .open-menu{
+        padding: 10px 20px;
+        color: black;
+        display: none;
+    }
+    
+    .close-menu{
+        position: absolute;
+        display: none;
+        top: 0;
+        padding: 10px 20px;
+        font-weight: bolder;
+    }
+    .hero-section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content{
+        width: 100%;
+        margin-top: 15%;
+        padding: 10px 20px;
+        text-align: center;
+    }
+    
+    .hero-content h1{
+        color: black;
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p{
+        font-size: 1.3rem;
+        color: white;
+    }
+    .hero-content button{
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 22px;
+    }
+    
+    .hero-content button:hover{
+        background-color: plum;
+        transition: 1.5s ease;
+    }
+}
+
+
+/*****************THE SERVICE SECTION ***************/
+#service-section{
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+#service-section h1{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.service-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services{
+    width: 50%;
+    margin: 30px;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 22px;
+}
+
+.service-container .services:hover{
+    background-color: burlywood;
+    transition: 1s ease-in-out;
+}
+
+.services img{
+    width: 30%;
+}
+
+/****************RESPONSIVENESS FOR THE SERVICE SECTION****************/
+@media only screen and (min-width: 568px) and (max-width: 968px){
+    #service-section{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #service-section h1{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .service-container{
+        width: 100%;
+        display: flex;
+        margin: auto;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
+    }
+
+    .services{
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 22px;
+    }
+
+    .services p{
+        font-size: 1.2rem;
+    }
+    
+    .services img{
+        width: 20%;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){
+    #service-section{
+        width: 100%;
+        height: 100%;
+    }
+    
+    #service-section h1{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .service-container{
+        width: 100%;
+        display: flex;
+        margin: auto;
+        padding: 10px 20px;
+        flex-wrap: nowrap;
+    }
+
+    .services{
+        margin: 20px;
+        padding: 10px 20px;
+        background-color: white;
+        border-radius: 22px;
+    }
+
+    .services p{
+        font-size: 1.3rem;
+    }
+    
+    .services img{
+        width: 20%;
+    }
+}
+
+
+/******************DESTINATION SECTION********************** */
+#destination-section{
+    width: 100%;
+    height: 100%;
+}
+
+#destination-section h1{
+    text-align: center;
+}
+
+.all-destination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.destination-country{
+    width: 50%;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 22px;
+}
+
+.destination-country img{
+    width: 100%;
+}
+
+.destination-country img:hover{
+    filter: opacity(0.6);
+}
+
+.country-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* *****************MEDIA RESPONSIVENESS FOR DESTINATION SECTION************ */
+@media only screen and (min-width: 568px) and (max-width: 968px){
+    
+    #destination-section h1{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .all-destination{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .destination-country{
+        width: 50%;
+        margin: 30px;
+        padding: 10px 20px;
+        border-radius: 22px;
+    }
+
+    .destination-country p{
+        font-size: 1.2rem;
+    }
+    
+    .destination-country img{
+        width: 100%;
+    }
+    
+    .country-details{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){
+    
+    #destination-section h1{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .all-destination{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    
+    .destination-country{
+        width: 50%;
+        margin: 30px;
+        padding: 10px 20px;
+        border-radius: 22px;
+    }
+
+    .country-details p , p{
+        font-size: 1.3rem;
+    }
+
+}
+
+
+/***********START OF THE BOOKINGS SECTION ***************/
+#booking-section{
+    width: 100%;
+    height: 100%;
+}
+
+#booking-section h1{
+    text-align: center;
+}
+
+.booking-process{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.booking-trip-img{
+    text-align: center;
+}
+
+.booking-trip-img img{
+    width: 50%;
+}
+
+.bookings-instructions{
+    padding: 10px 20px;
+    width: 85%;
+}
+
+/*************MEDIA RESPONSIVENESS FOR THE BOOKING SECTION*********** */
+@media only screen and (min-width: 568px) and (max-width: 968px){
+    #booking-section{
+        width: 100%;
+        height: 100%;
+    }
+
+    #booking-section h1{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+    .booking-process{
+        display: flex;
+        flex-direction: unset;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+    }
+    
+    .booking-trip-img{
+        margin: 30px;
+        text-align: center;
+    }
+
+    .booking-trip-img h2{
+        font-size: 1.2rem;
+    }
+    
+    .booking-trip-img img{
+        width: 50%;
+    }
+    
+    .bookings-instructions{
+        padding: 10px 20px;
+        width: 85%;
+        margin-top: 20px;
+    }
+
+    .bookings-instructions .steps h2{
+        font-size: 1.2rem;
+    }
+
+    .steps p{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){
+    #booking-section h1{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .booking-process{
+        display: flex;
+        flex-direction: unset;
+        justify-content: center;
+        margin-left: 100px;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+    }
+    
+    .booking-trip-img{
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .booking-trip-img p{
+        font-size: 1.2rem;
+    }
+    .booking-trip-img h2{
+        font-size: 1.4rem;
+    }
+    
+    .booking-trip-img img{
+        width: 50%;
+    }
+    
+    .bookings-instructions{
+        padding: 10px 20px;
+        width: 85%;
+    }
+
+    .steps h2{
+        font-size: 1.4rem;
+    }
+}
+
+
+/* **********START OF THE TESTIMONIALS*********** */
+#testimonials{
+    width: 100%;
+    height: 100%;
+}
+
+#testimonials h1{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.testimonial-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.testimonies{
+    width: 80%;
+    background-color: white;
+    box-shadow: 5px 10px 10px 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.testimonies img{
+    display: block;
+    margin: auto;
+    width: 40%;
+    height: 30%;
+    border-radius: 50%;
+}
+
+.testimonies p{
+    text-align: center;
+}
+
+.navigateBtn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+
+.navigateBtn .next-btn, 
+.navigateBtn .prev-btn {
+    padding: 10px 20px;
+}
+
+
+/************** MEDIA RESPONSIVENESS FOR TESTIMONIALS ****************/
+@media only screen and (min-width: 568px) and (max-width: 968px){    
+    #testimonials h1{
+        text-align: center;
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+    
+    .testimonial-container{
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+    
+    .testimonies{
+        width: 60%;
+        height: 40vh;
+        background-color: white;
+        box-shadow: 5px 10px 10px 5px;
+        padding: 10px 20px;
+    }
+    
+    .testimonies img{
+        display: block;
+        margin: auto;
+        width: 20%;
+        height: 40%;
+        border-radius: 50%;
+    } 
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){    
+    #testimonials h1{
+        text-align: center;
+        font-size: 2rem;
+        padding: 10px 20px;
+    }
+    
+    .testimonial-container{
+        display: flex;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+    
+    .testimonies{
+        width: 50%;
+        height: 50vh;
+        background-color: white;
+        box-shadow: 5px 10px 10px 5px;
+        padding: 10px 20px;
+    }
+    
+    .testimonies img{
+        display: block;
+        margin: auto;
+        width: 20%;
+        height: 40%;
+        border-radius: 50%;
+    } 
+}
+/* END OF TESTIMONIAL */
+
+/* AIR BRANDS SECTION */
+#company-logos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#company-logos img{
+    width: 40%;
+    padding: 10px 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+/* TABLET RESPONSIVENESS */
+@media only screen and (min-width: 768px){
+    #company-logos img{
+        width: 20%;
+        padding: 10px 20px;
+        margin: 10px;
+        margin-bottom: 50px;
+    }
+}
+
+
+/* ****************THE SUBSSCRIPTION SECTION***************** */
+#subscription-section{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 22px;
+}
+  
+
+#subscription-section h1{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.subscription{
+    display: flex;
+}
+
+.subscription input{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.subscription button{
+    padding: 5px;
+    
+}
+
+@media only screen and (min-width: 568px) and (max-width: 968px){
+    #subscription-section{
+        width: 50%;
+        height: 30vh;
+        margin: auto;
+        padding: 10px 20px;
+        background-color: #f5f5f5;
+        border-radius: 22px;
+        box-shadow: 5px 5px 5px 5px black;
+    }
+      
+    
+    #subscription-section h1{
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .subscription{
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        gap: 10px;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .subscription button{
+        padding: 5px;
+    }
+}
+
+@media only screen and (min-width: 968px) and (max-width: 1600px){
+    #subscription-section{
+        width: 50%;
+        height: 30vh;
+        margin: auto;
+        padding: 10px 20px;
+        background-color: #f5f5f5;
+        border-radius: 22px;
+        box-shadow: 5px 5px 5px 5px black;
+    }
+      
+    
+    #subscription-section h1{
+        text-align: center;
+        padding: 10px 20px;
+    }
+    
+    .subscription{
+        display: flex;
+        margin: auto;
+        gap: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 70%;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+/* END OF SUBSCRIPTION SECTION */
+footer{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    margin-top: 60px;
+}
+
+footer h1{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+
+
+
+
